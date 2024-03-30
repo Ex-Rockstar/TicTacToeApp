@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:tictactoe/screens/game.dart';
 
 void main() {
-  runApp(const TicTacToe());
+  runApp(const MyApp());
 }
 
-class TicTacToe extends StatefulWidget {
-  const TicTacToe({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
-  @override
-  State<TicTacToe> createState() => _TicTacToeState();
-}
-
-class _TicTacToeState extends State<TicTacToe> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: GameScreen(),
+    );
   }
 }
